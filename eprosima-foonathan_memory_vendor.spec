@@ -14,8 +14,6 @@ URL: https://www.eprosima.com/
 
 Source: https://github.com/eProsima/foonothan_memory_vendor/archive/refs/tags/v%{version}.tar.gz
 
-Source: %{name}-%{version}.tar.gz
-
 BuildRequires: gcc-c++
 BuildRequires: cmake
 #BuildRequires: git
