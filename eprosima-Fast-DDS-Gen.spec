@@ -9,7 +9,6 @@ Vendor: eProsima
 Packager: ESO <eltmgr@eso.org>
 URL: https://www.eprosima.com/
 
-%define _sourcedir ../SOURCES/%{name}
 Source0: https://github.com/eProsima/Fast-DDS-Gen/archive/refs/tags/v%{version}.tar.gz
 Source1: https://github.com/eProsima/IDL-Parser/archive/refs/tags/v1.1.1.tar.gz
 
