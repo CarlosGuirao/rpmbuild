@@ -16,7 +16,7 @@ Source: https://github.com/eProsima/foonothan_memory_vendor/archive/refs/tags/v%
 
 BuildRequires: gcc-c++
 BuildRequires: cmake
-#BuildRequires: git
+BuildRequires: git
 
 %define __os_install_post %{nil}
 %define _prefix  /usr/local
