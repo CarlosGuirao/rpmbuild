@@ -9,7 +9,6 @@ Vendor: eProsima
 Packager: ESO <eltmgr@eso.org>
 URL: https://www.eprosima.com/
 
-%define _sourcedir ../SOURCES/%{name}
 Source: https://github.com/eProsima/Fast-DDS/archive/refs/tags/v%{version}.tar.gz
 
 BuildRequires: gcc-c++
