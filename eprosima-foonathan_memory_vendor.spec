@@ -12,7 +12,6 @@ Vendor: eProsima
 Packager: ESO <eltmgr@eso.org>
 URL: https://www.eprosima.com/
 
-%define _sourcedir ../SOURCES/%{name}
 Source: https://github.com/eProsima/foonothan_memory_vendor/archive/refs/tags/v%{version}.tar.gz
 
 Source: %{name}-%{version}.tar.gz
