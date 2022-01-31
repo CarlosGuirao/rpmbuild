@@ -1,6 +1,5 @@
-# Note: Uninstall any previous installation of this RPM before building it again:
-#   rpm -e  eprosima-foonathan_memory_vendor --nodeps
-# otherwise error in the build step
+# With FOONATHAN_MEMORY_BUILD_TESTS=OFF to avoid the doctest download via GIT
+# which breaks the isolation of the Fedora Corp installation
 Name: foonathan_memory
 Version: 0.7
 Release: 1%{?dist}
@@ -24,7 +23,7 @@ STL compatible C++ memory allocator library
 %setup -n memory-0.7-1
 
 %build
-%cmake -DCMAKE_INSTALL_PREFIX=%{_prefix} -DBUILD_SHARED_LIBS=OFF . 
+%cmake -DCMAKE_INSTALL_PREFIX=%{_prefix} -DFOONATHAN_MEMORY_BUILD_TESTS=OFF -DBUILD_SHARED_LIBS=OFF . 
 %cmake_build 
 
 %install
@@ -33,8 +32,8 @@ STL compatible C++ memory allocator library
 %files
 %{_prefix}/bin/nodesize_dbg
 %{_prefix}/include/foonathan_memory
-%{_prefix}/include/doctest
-%{_prefix}/lib64/cmake/doctest
+# %{_prefix}/include/doctest
+# %{_prefix}/lib64/cmake/doctest
 %{_prefix}/lib64/foonathan_memory
 %{_prefix}/lib64/libfoonathan_memory-0.7.1.a
 %{_prefix}/share/foonathan_memory
