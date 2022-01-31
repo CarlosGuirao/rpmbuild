@@ -9,9 +9,10 @@ Packager: ESO <eltmgr@eso.org>
 URL: https://www.eprosima.com/
 
 Source0: https://github.com/eProsima/foonothan_memory_vendor/archive/refs/tags/%{name}-%{version}.tar.gz
-# BuildRequires: gcc-c++
+
 BuildArch: noarch
 BuildRequires: cmake
+BuildRequires: gcc-c++
 BuildRequires: foonathan_memory >= 0.7-1
 Requires: foonathan_memory >= 0.7-1
 
@@ -26,7 +27,7 @@ Requires: foonathan_memory >= 0.7-1
 %setup 
 
 %build
-%cmake -DCMAKE_CXX_COMPILER=/usr/bin/g++ -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_PREFIX_PATH=%{_prefix} -DCMAKE_INSTALL_PREFIX=%{_prefix} .
+%cmake -DCMAKE_PREFIX_PATH=%{_prefix} -DCMAKE_INSTALL_PREFIX=%{_prefix} .
 %cmake_build
 
 %install
