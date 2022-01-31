@@ -26,7 +26,7 @@ Requires: foonathan_memory >= 0.7-1
 %setup 
 
 %build
-%cmake -DCMAKE_PREFIX_PATH=%{_prefix} -DCMAKE_INSTALL_PREFIX=%{_prefix} .
+%cmake -DCMAKE_CXX_COMPILER=/usr/bin/g++ -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_PREFIX_PATH=%{_prefix} -DCMAKE_INSTALL_PREFIX=%{_prefix} .
 %cmake_build
 
 %install
