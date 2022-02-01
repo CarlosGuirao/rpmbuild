@@ -4,24 +4,25 @@ Release: 1%{?dist}
 Summary: eProsima interface to foonathan_memory library
 
 Group: Development/Libraries
-License: Apache license
+License: ASL 2.0
 Packager: ESO <eltmgr@eso.org>
 URL: https://www.eprosima.com/
 
 Source0: https://github.com/eProsima/foonothan_memory_vendor/archive/refs/tags/%{name}-%{version}.tar.gz
-
 BuildArch: noarch
-BuildRequires: cmake
 BuildRequires: gcc-c++
-BuildRequires: foonathan_memory >= 0.7-1
-Requires: foonathan_memory >= 0.7-1
+BuildRequires: cmake
+BuildRequires: make
+# BuildRequires: foonathan_memory >= 0.7-1
+# Requires: foonathan_memory >= 0.7-1
 
-%define __os_install_post %{nil}
+# %define __os_install_post %{nil}
 %define _prefix  /usr/local
 # Disable debug package creation otherwise this fails in "mock" on Fedora.
-%global debug_package %{nil}
+# %global debug_package %{nil}
 
 %description
+This package will download, patch, build and install foonathan_memory for its use with Fast-RTPS.
 
 %prep
 %setup 
@@ -35,7 +36,13 @@ Requires: foonathan_memory >= 0.7-1
 
 %files
 %{_prefix}/share/foonathan_memory_vendor
-
+%{_prefix}/bin/nodesize_dbg
+%{_prefix}/include/foonathan_memory
+# %{_prefix}/include/doctest
+# %{_prefix}/lib64/cmake/doctest
+%{_prefix}/lib64/foonathan_memory
+%{_prefix}/lib64/libfoonathan_memory-0.7.1.a
+%{_prefix}/share/foonathan_memory
 
 %clean
 rm -fr $RPM_BUILD_ROOT
