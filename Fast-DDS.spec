@@ -20,11 +20,11 @@ BuildRequires: make
 BuildRequires: tinyxml2-devel
 BuildRequires: asio-devel
 BuildRequires: foonathan_memory_vendor >= 1.2.0
-BuildRequires: Fast-CDR >= 1.0.23
+BuildRequires: Fast-CDR-devel >= 1.0.23
 
 Requires: tinyxml2
 Requires: foonathan_memory_vendor >= 1.2.0
-Requires: Fast-CDR >= 1.0.23
+Requires: Fast-CDR-devel >= 1.0.23
 
 # %define __os_install_post %{nil}
 %define _prefix  /usr/local
@@ -91,6 +91,7 @@ EOF
 %{_prefix}/tools/fastdds
 %{_prefix}/lib64/libfast*
 %{_prefix}/lib64/pkgconfig/fast_dds.pc
+%license %{_prefix}/share/fastrtps/LICENSE
 
 # %clean
 # rm -fr $RPM_BUILD_ROOT
