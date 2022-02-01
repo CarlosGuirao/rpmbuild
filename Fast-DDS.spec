@@ -1,10 +1,13 @@
+%global project Fast-DDS
+%global soversion 1
+
 Name: Fast-DDS
 Version: 2.5.0
 Release: 1%{?dist}
 Summary: eProsima Fast-DDS library
 
 Group: Development/Libraries
-License: Apache License Ver.2.0
+License: ASL 2.0
 Vendor: eProsima
 Packager: ESO <eltmgr@eso.org>
 URL: https://www.eprosima.com/
@@ -13,6 +16,7 @@ Source: https://github.com/eProsima/Fast-DDS/archive/refs/tags/%{name}-%{version
 
 BuildRequires: gcc-c++
 BuildRequires: cmake
+BuildRequires: make
 BuildRequires: tinyxml2-devel
 BuildRequires: asio-devel
 BuildRequires: foonathan_memory_vendor >= 1.2.0
@@ -22,10 +26,10 @@ Requires: tinyxml2
 Requires: foonathan_memory_vendor >= 1.2.0
 Requires: Fast-CDR >= 1.0.23
 
-%define __os_install_post %{nil}
+# %define __os_install_post %{nil}
 %define _prefix  /usr/local
 # Disable debug package creation otherwise this fails in "mock" on Fedora.
-%global debug_package %{nil}
+# %global debug_package %{nil}
 
 %description
 Fast DDS is a standalone Cpp middleware implementation providing both the 
@@ -88,8 +92,8 @@ EOF
 %{_prefix}/lib64/libfast*
 %{_prefix}/lib64/pkgconfig/fast_dds.pc
 
-%clean
-rm -fr $RPM_BUILD_ROOT
+# %clean
+# rm -fr $RPM_BUILD_ROOT
 
 %changelog
 * Tue Dec 28 2021 DevEnv 4.1 opt-eprosima
