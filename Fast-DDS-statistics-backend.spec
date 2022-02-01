@@ -1,10 +1,13 @@
+%global project Fast-DDS-statistics-backend
+%global soversion 1
+
 Name: Fast-DDS-statistics-backend
 Version: 0.4.0
 Release: 1%{?dist}
 Summary: eProsima Fast-DDS statistics backend library
 
 Group: Development/Libraries
-License: Apache License Ver.2.0
+License: ASL 2.0
 Vendor: eProsima
 Packager: ESO <eltmgr@eso.org>
 URL: https://www.eprosima.com/
@@ -15,7 +18,7 @@ Source: %{name}-%{version}.tar.gz
 
 BuildRequires: gcc-c++
 BuildRequires: cmake
-BuildRequires: git
+BuildRequires: make
 BuildRequires: foonathan_memory_vendor >= 1.2.0
 BuildRequires: Fast-CDR >= 1.0.23
 BuildRequires: Fast-DDS >= 2.5.0
@@ -24,10 +27,10 @@ Requires: foonathan_memory_vendor >= 1.2.0
 Requires: Fast-CDR >= 1.0.23
 Requires: Fast-DDS >= 2.5.0
 
-%define __os_install_post %{nil}
+# %define __os_install_post %{nil}
 %define _prefix  /usr/local
 # Disable debug package creation otherwise this fails in "mock" on Fedora.
-%global debug_package %{nil}
+# %global debug_package %{nil}
 
 %description
 Fast DDS is a standalone Cpp middleware implementation providing both the 
@@ -57,10 +60,10 @@ a large variety of features and tools, and the option of commercial support.
 %{_prefix}/include/fastdds_statistics_backend
 %{_prefix}/lib64/cmake/fastdds_statistics_backend
 %{_prefix}/lib64/libfastdds_statistics_backend*
-%doc %{_prefix}/share/fastdds_statistics_backend/LICENSE
+%license %{_prefix}/share/fastdds_statistics_backend/LICENSE
 
-%clean
-rm -fr $RPM_BUILD_ROOT
+# %clean
+# rm -fr $RPM_BUILD_ROOT
 
 %changelog
 * Tue Dec 28 2021 DevEnv 4.1 opt-eprosima
