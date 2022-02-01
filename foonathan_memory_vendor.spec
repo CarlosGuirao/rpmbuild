@@ -9,7 +9,8 @@ Packager: ESO <eltmgr@eso.org>
 URL: https://www.eprosima.com/
 
 Source0: https://github.com/eProsima/foonothan_memory_vendor/archive/refs/tags/%{name}-%{version}.tar.gz
-BuildArch: noarch
+# BuildArch: noarch
+BuildRequires: git
 BuildRequires: gcc-c++
 BuildRequires: cmake
 BuildRequires: make
