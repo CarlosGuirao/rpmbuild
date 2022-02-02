@@ -29,6 +29,10 @@ Requires: Fast-DDS >= 2.5.0
 
 %define _prefix  /usr/local
 # Disable debug package creation otherwise this fails in "mock" on Fedora.
+%define __os_install_post %{nil}
+%define _prefix  /usr/local
+%global debug_package %{nil}
+
 
 %description
 Fast DDS is a standalone Cpp middleware implementation providing both the 
