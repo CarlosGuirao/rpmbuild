@@ -27,10 +27,8 @@ Requires: foonathan_memory_vendor >= 1.2.0
 Requires: Fast-CDR >= 1.0.23
 Requires: Fast-DDS >= 2.5.0
 
-# %define __os_install_post %{nil}
 %define _prefix  /usr/local
 # Disable debug package creation otherwise this fails in "mock" on Fedora.
-# %global debug_package %{nil}
 
 %description
 Fast DDS is a standalone Cpp middleware implementation providing both the 
