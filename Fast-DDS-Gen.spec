@@ -14,6 +14,10 @@ Source1: https://github.com/eProsima/IDL-Parser/archive/refs/tags/IDL-Parser-1.1
 
 BuildRequires: java
 BuildRequires: git
+BuildRequires: javapackages-tools
+BuildRequires: java-11-openjdk-devel
+BuildRequires: xz-java
+BuildRequires: ant-javamail
 
 Requires: java
 
