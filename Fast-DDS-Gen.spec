@@ -10,7 +10,7 @@ Packager: ESO <eltmgr@eso.org>
 URL: https://www.eprosima.com/
 
 Source0: https://github.com/eProsima/Fast-DDS-Gen/archive/refs/tags/%{name}-%{version}.tar.gz
-Source1: https://github.com/eProsima/IDL-Parser/archive/refs/tags/IDL-Parser-1.1.1.tar.gz
+# Source1: https://github.com/eProsima/IDL-Parser/archive/refs/tags/IDL-Parser-1.1.1.tar.gz
 
 BuildRequires: java
 
@@ -35,9 +35,6 @@ a large variety of features and tools, and the option of commercial support.
 %setup 
 
 %build
-cd thirdparty ; tar xf %{SOURCE1}
-rmdir idl-parser ; ln -s IDL-Parser-1.1.1 idl-parser
-cd ..
 ./gradlew assemble
 
 %install
