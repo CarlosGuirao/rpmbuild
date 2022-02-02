@@ -4,7 +4,7 @@ Release: 1%{?dist}
 Summary: Fast-DDS Gen library
 
 Group: Development/Libraries
-License: Apache License Ver.2.0
+License: ASL 2.0
 Vendor: eProsima
 Packager: ESO <eltmgr@eso.org>
 URL: https://www.eprosima.com/
@@ -14,10 +14,8 @@ Source1: https://github.com/eProsima/IDL-Parser/archive/refs/tags/IDL-Parser-1.1
 
 BuildRequires: java
 
-# %define __os_install_post %{nil}
 %define _prefix  /usr/local
-# Disable debug package creation otherwise this fails in "mock" on Fedora.
-# %global debug_package %{nil}
+%define debug_package %{nil}
 
 %description
 Fast DDS is a standalone Cpp middleware implementation providing both the 
