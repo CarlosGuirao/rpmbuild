@@ -40,7 +40,7 @@ a large variety of features and tools, and the option of commercial support.
 cd thirdparty ; tar xf %{SOURCE1}
 rmdir idl-parser ; ln -s IDL-Parser-1.1.1 idl-parser
 cd ..
-./gradlew -a assemble
+./gradlew --no-configure-on-demand --no-daemon assemble
 
 %install
 ./gradlew install --install_path %{buildroot}%{_prefix}
