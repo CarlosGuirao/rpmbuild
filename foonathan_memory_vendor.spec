@@ -34,8 +34,6 @@ This package will download, patch, build and install foonathan_memory for its us
 %{_prefix}/share/foonathan_memory_vendor
 %{_prefix}/bin/nodesize_dbg
 %{_prefix}/include/foonathan_memory
-# %{_prefix}/include/doctest
-# %{_prefix}/lib64/cmake/doctest
 %{_prefix}/lib64/foonathan_memory
 %{_prefix}/lib64/libfoonathan_memory-0.7.1.a
 %{_prefix}/share/foonathan_memory
