@@ -16,6 +16,7 @@ BuildRequires: cmake
 BuildRequires: make
 
 %define _prefix  /usr/local
+%global debug_package %{nil}
 
 %description
 This package will download, patch, build and install foonathan_memory for its use with Fast-RTPS.
@@ -34,14 +35,9 @@ This package will download, patch, build and install foonathan_memory for its us
 %{_prefix}/share/foonathan_memory_vendor
 %{_prefix}/bin/nodesize_dbg
 %{_prefix}/include/foonathan_memory
-# %{_prefix}/include/doctest
-# %{_prefix}/lib64/cmake/doctest
 %{_prefix}/lib64/foonathan_memory
 %{_prefix}/lib64/libfoonathan_memory-0.7.1.a
 %{_prefix}/share/foonathan_memory
-
-%clean
-rm -fr $RPM_BUILD_ROOT
 
 %changelog
 * Tue Dec 28 2021 DevEnv 4.1 eprosima foonathan_memory_vendor 1.2.0
