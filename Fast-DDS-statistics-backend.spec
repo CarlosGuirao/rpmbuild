@@ -22,12 +22,12 @@ BuildRequires: make
 BuildRequires: foonathan_memory_vendor >= 1.2.0
 BuildRequires: Fast-CDR >= 1.0.23
 BuildRequires: Fast-DDS >= 2.5.0
-BuildRequires: tinyxml-devel
+BuildRequires: tinyxml2-devel
 
 Requires: foonathan_memory_vendor >= 1.2.0
 Requires: Fast-CDR >= 1.0.23
 Requires: Fast-DDS >= 2.5.0
-Requires: tinyxml-devel
+Requires: tinyxml2-devel
 
 %define _prefix  /usr/local
 

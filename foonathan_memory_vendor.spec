@@ -14,13 +14,8 @@ BuildRequires: git
 BuildRequires: gcc-c++
 BuildRequires: cmake
 BuildRequires: make
-# BuildRequires: foonathan_memory >= 0.7-1
-# Requires: foonathan_memory >= 0.7-1
 
-# %define __os_install_post %{nil}
 %define _prefix  /usr/local
-# Disable debug package creation otherwise this fails in "mock" on Fedora.
-# %global debug_package %{nil}
 
 %description
 This package will download, patch, build and install foonathan_memory for its use with Fast-RTPS.

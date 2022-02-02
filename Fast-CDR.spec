@@ -18,10 +18,7 @@ BuildRequires: gcc-c++
 BuildRequires: cmake
 BuildRequires: make
 
-# %define __os_install_post %{nil}
 %define _prefix  /usr/local
-# Disable debug package creation otherwise this fails in "mock" on Fedora.
-# %global debug_package %{nil}
 
 %description
 eProsima FastCDR is a C++ library that provides two serialization mechanisms.

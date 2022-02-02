@@ -14,6 +14,7 @@ URL: https://www.eprosima.com/
 
 Source: https://github.com/eProsima/Fast-DDS/archive/refs/tags/%{name}-%{version}.tar.gz
 
+BuildRequires: git
 BuildRequires: gcc-c++
 BuildRequires: cmake
 BuildRequires: make
@@ -22,7 +23,7 @@ BuildRequires: asio-devel
 BuildRequires: foonathan_memory_vendor >= 1.2.0
 BuildRequires: Fast-CDR-devel >= 1.0.23
 
-Requires: tinyxml2
+Requires: tinyxml2-devel
 Requires: foonathan_memory_vendor >= 1.2.0
 Requires: Fast-CDR-devel >= 1.0.23
 
