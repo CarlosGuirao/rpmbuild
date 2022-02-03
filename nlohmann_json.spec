@@ -12,7 +12,7 @@ URL: https://json.org
 
 Source: %{myname}-%{version}.tar.gz 
 
-BuildRequires: gcc
+BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: cmake
 
