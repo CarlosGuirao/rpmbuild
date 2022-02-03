@@ -1,0 +1,22 @@
+--- CMakeLists.txt.orig	2022-01-02 17:39:47.322540798 +0000
++++ CMakeLists.txt	2022-01-02 17:46:29.650531865 +0000
+@@ -86,6 +86,19 @@
+ hunter_add_package(nlohmann_json)
+ find_package(nlohmann_json CONFIG REQUIRED)
+ list(APPEND LIBS nlohmann_json::nlohmann_json)
++include_directories(${THRIFT_INCLUDE_DIR})
++include_directories(${BOOST_INCLUDE_DIR})
++hunter_add_package(thrift)
++find_package(thrift ${hunter_config} REQUIRED)
++if(HUNTER_ENABLED)
++	list(APPEND LIBS thrift::thrift_static)
++else()
++	list(APPEND LIBS ${THRIFT_LIBRARIES})
++	include_directories(${THRIFT_INCLUDE_DIR})
++	include_directories(${BOOST_INCLUDE_DIR})
++endif()
++list(APPEND package_deps thrift)
++
+ list(APPEND package_deps nlohmann_json)
+ 
+ option(JAEGERTRACING_BUILD_EXAMPLES "Build examples" ON)
