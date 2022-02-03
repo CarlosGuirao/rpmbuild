@@ -14,6 +14,11 @@ Source1: https://github.com/eProsima/IDL-Parser/archive/refs/tags/IDL-Parser-1.1
 
 BuildRequires: java
 BuildRequires: git
+BuildRequires: javapackages-tools
+BuildRequires: java-11-openjdk-devel
+BuildRequires: xz-java
+BuildRequires: ant-javamail
+
 Requires: java
 
 %define _prefix  /usr/local
@@ -37,10 +42,11 @@ a large variety of features and tools, and the option of commercial support.
 %setup 
 
 %build
+git init
 cd thirdparty ; tar xf %{SOURCE1}
 rmdir idl-parser ; ln -s IDL-Parser-1.1.1 idl-parser
 cd ..
-./gradlew --no-configure-on-demand --no-daemon assemble
+./gradlew assemble
 
 %install
 ./gradlew install --install_path %{buildroot}%{_prefix}
