@@ -11,7 +11,7 @@ URL: https://github.com/opentracing
 
 Source: %{name}-%{version}.tar.gz 
 
-BuildRequires: gcc
+BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: cmake
 
