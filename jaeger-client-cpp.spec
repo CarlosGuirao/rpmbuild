@@ -17,11 +17,13 @@ BuildRequires: gcc-c++
 BuildRequires: make
 BuildRequires: cmake
 BuildRequires: boost-devel 
+BuildRequires: yaml-cpp-devel
 BuildRequires: thrift-devel >= 0.14.0
 BuildRequires: opentracing-cpp >= 1.6.0
 BuildRequires: nlohmann_json >= 3.10.4
 
 Requires: boost-devel 
+Requires: yaml-cpp-devel
 Requires: thrift >= 0.14.0
 Requires: opentracing-cpp >= 1.6.0
 Requires: nlohmann_json >= 3.10.4
