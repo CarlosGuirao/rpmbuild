@@ -1,0 +1,11 @@
+--- qtopcua/src/3rdparty/open62541.pri.ori	2022-02-14 11:52:23.042861322 +0000
++++ qtopcua/src/3rdparty/open62541.pri	2022-02-14 12:01:31.948849135 +0000
+@@ -8,7 +8,7 @@
+ win32-msvc|winrt: {
+     SOURCES += $$OPEN62541_SOURCES
+ } else {
+-    OPEN62541_CFLAGS += -Wno-unused-parameter -Wno-unused-function -Wno-incompatible-pointer-types -Wno-format
++    OPEN62541_CFLAGS += -Wno-unused-parameter -Wno-unused-function -Wno-incompatible-pointer-types
+ 
+     # The open62541 source code produces lots of warnings.
+     # This custom compiler will disable these warnings just for open62541.c
