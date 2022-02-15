@@ -1,0 +1,10 @@
+--- redis-plus-plus-1.3.3/cmake/redis++.pc.in.ori	2022-02-15 16:55:04.482539773 +0000
++++ redis-plus-plus-1.3.3/cmake/redis++.pc.in	2022-02-15 16:55:51.165538736 +0000
+@@ -1,6 +1,6 @@
+ prefix=@CMAKE_INSTALL_PREFIX@
+ exec_prefix=${prefix}
+-libdir=${exec_prefix}/lib
++libdir=${exec_prefix}/lib64
+ includedir=${prefix}/include
+ 
+ Name: redis++

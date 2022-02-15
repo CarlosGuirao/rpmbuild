@@ -1,0 +1,22 @@
+--- redis-plus-plus-1.3.3/CMakeLists.txt.ori	2022-02-15 16:54:41.586540281 +0000
++++ redis-plus-plus-1.3.3/CMakeLists.txt	2022-02-15 16:55:38.679539014 +0000
+@@ -239,8 +239,8 @@
+ 
+ install(TARGETS ${REDIS_PLUS_PLUS_TARGETS}
+         EXPORT redis++-targets
+-        LIBRARY DESTINATION lib
+-        ARCHIVE DESTINATION lib
++        LIBRARY DESTINATION lib64
++        ARCHIVE DESTINATION lib64
+         RUNTIME DESTINATION bin
+         INCLUDES DESTINATION include)
+ 
+@@ -282,7 +282,7 @@
+         "${CMAKE_CURRENT_BINARY_DIR}/cmake/redis++.pc" @ONLY)
+ 
+ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/cmake/redis++.pc"
+-        DESTINATION "lib/pkgconfig")
++        DESTINATION "lib64/pkgconfig")
+ 
+ # All the Debian-specific cpack defines.
+ if(${CMAKE_VERSION} VERSION_GREATER 3.6)
