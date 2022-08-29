@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${prefix}/lib64
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: cpp-netlib-uri
+Description: cpp-netlib URI https://github.com/cpp-netlib/uri
+Version: 1.1.0
+
+Requires:
+Libs: -L${libdir} -lnetwork-uri
+Cflags: -I${includedir}
